@@ -1,0 +1,6 @@
+services:
+- type: web
+  name: yaxtest
+  env: ruby
+  buildCommand: bundle install
+  startCommand: bundle exec ruby main.rb
