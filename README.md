@@ -35,7 +35,7 @@ The `api` folder contains code for Vercel.
 
 ## Installing gems
 
-Before testing locally or deploying on Vercel or Render.com, you must install the needed gems. Remove `Gemfile.lock` to create a pristine environment. Then run `bundle install'` in both the top level (Render.com) and `api` (Vercel) folders to create a `Gemfile.lock` for both hosting environments.
+Before testing locally or deploying on Vercel or Render.com, you must install the needed gems. Remove `Gemfile.lock` to create a pristine environment. Then run `bundle install` in both the top level (Render.com) and `api` (Vercel) folders to create a `Gemfile.lock` for both hosting environments.
 
 ```bash
 $ rm Gemfile.lock
@@ -104,7 +104,7 @@ The [cowsay](https://github.com/johnnyt/cowsay) gem is an ordinary gem and insta
 
 The [fauna](https://github.com/igas/faunadb-ruby/tree/patch-1) gem is a fork of a gem that is not currently maintained. It is an example of a common situation in the Ruby world. In this case, a developer has forked a gem and patched it with an update. The update has not been published on the rubygems server so it must be installed from GitHub. [Bundler documentation](https://bundler.io/guides/git.html) shows several formats for specifying a gem to be installed from GitHub. The gem installs successfully on Render.com but **fails to install on Vercel.**
 
-The [nokogiri](https://nokogiri.org/) requires native extensions. Nokogiri is a dependency for many other Ruby gems so it is important that it can be installed successfully. It installs successfully on either Vercel or Render.com.
+The [nokogiri](https://nokogiri.org/) gem requires native extensions. Nokogiri is a dependency for many other Ruby gems so it is important that it can be installed successfully. It installs successfully on either Vercel or Render.com.
 
 ## Vercel trial function
 
