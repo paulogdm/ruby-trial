@@ -240,7 +240,7 @@ I’ve tried several scenarios to deploy on Vercel to try to determine what sett
 
 For the first trial, I removed the Fauna gem from the `try-vercel.rb` file.
 
-* try-vercel.rb*
+*try-vercel.rb*
 
 ```ruby
 require 'rubygems'
