@@ -1,7 +1,7 @@
 # Comparing Ruby environments on Vercel and Render.com
 
-### 9/1/20
-### 9/2/20
+_9/1/20_
+_9/2/20_
 
 This README is for an example project that compares Ruby environments on [Vercel](https://vercel.com/) and [Render.com](https://render.com/). The goal is to compare the capability to deploy Ruby functions as API endpoints on the Vercel and Render.com platforms.
 
@@ -9,7 +9,9 @@ This project is a work in progress and currently details some unresolved issues 
 
 ## Questions for Vercel Support
 
-What is the correct “Build Command” and “Output Directory” to run  `bundle update` (in order to install a gem from GitHub) and serve Ruby functions from an  `api` directory?
+Should the Gemfile be placed in the project root directory or in the  `api` directory?
+
+What is the correct “Build Command” and “Output Directory” settings to run  `bundle update` (in order to install a gem from GitHub) and serve Ruby functions from an `api` directory?
 
 When “Build Command” and “Output Directory” are not set, how are Ruby gems installed? Does `bundle install` run by default for a Ruby function? Why is there no logging of bundler output in the build logs during a default deploy?
 
@@ -49,7 +51,7 @@ The Gemfile is designed to test three aspects of Ruby support that can be proble
 - installing a gem from a GitHub repository and branch
 - installing a gem that has to be built with native extensions
 
-** Gemfile**
+*Gemfile*
 
 ```ruby
 source "https://rubygems.org"
@@ -60,7 +62,7 @@ gem 'nokogiri'
 
 The [cowsay](https://github.com/johnnyt/cowsay) gem is an ordinary gem and installs successfully on either Vercel or Render.com.
 
-The [fauna](https://github.com/igas/faunadb-ruby/tree/patch-1) gem is a fork of a gem that is not currently maintained. It is an example of a common situation in the Ruby world. In this case, a developer has forked a gem and patched it with an update. The update has not been published on the rubygems server so it must be installed from GitHub. [Bundler documentation](https://bundler.io/guides/git.html) shows several formats for specifying a gem to be installed from GitHub. The gem installs successfully on Render.com but **fails to install on Vercel.**
+The [fauna](https://github.com/igas/faunadb-ruby/tree/patch-1) gem is a fork of a gem that is not currently maintained. It is an example of a common situation in the Ruby world. In this case, a developer has forked a gem and patched it with an update. The update has not been published on the rubygems server so it must be installed from GitHub. [Bundler documentation](https://bundler.io/guides/git.html) shows several formats for specifying a gem to be installed from GitHub. The gem installs successfully on Render.com but *fails to install on Vercel.*
 
 The [nokogiri](https://nokogiri.org/) gem requires native extensions. Nokogiri is a dependency for many other Ruby gems so it is important that it can be installed successfully. It installs successfully on either Vercel or Render.com.
 
@@ -68,7 +70,7 @@ The [nokogiri](https://nokogiri.org/) gem requires native extensions. Nokogiri i
 
 This is a simple Ruby function that requires the gems described above. It doesn’t run successfully on Vercel.
 
-**try-vercelrb**
+*try-vercelrb*
 
 ```ruby
 require 'rubygems'
@@ -99,7 +101,7 @@ In response to an HTTP request, the function responds with a “Hello World” m
 
 I’ve tried a similar function on Render.com for comparison to Vercel. It can be deployed and run successfully on Render.com.
 
-**try-render.rb**
+*try-render.rb*
 
 ```ruby
 require 'rubygems'
@@ -238,7 +240,7 @@ I’ve tried several scenarios to deploy on Vercel to try to determine what sett
 
 For the first trial, I removed the Fauna gem from the `try-vercel.rb` file.
 
-** try-vercel.rb**
+* try-vercel.rb*
 
 ```ruby
 require 'rubygems'
@@ -299,7 +301,7 @@ My questions:
 
 Next I will try restoring the Fauna gem to the `try-vercel.rb` file.
 
-** try-vercel.rb**
+* try-vercel.rb*
 
 ```ruby
 require 'rubygems'
@@ -371,7 +373,7 @@ Unknown application error occurred
 Function<LoadError>
 ```
 
-This error originates from the code in **try-vercelrb** at line 3:
+This error originates from the code in *try-vercelrb* at line 3:
 
 ```ruby
 require 'fauna'
