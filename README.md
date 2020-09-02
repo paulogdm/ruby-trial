@@ -301,7 +301,7 @@ My questions:
 
 Next I will try restoring the Fauna gem to the `try-vercel.rb` file.
 
-* try-vercel.rb*
+*try-vercel.rb*
 
 ```ruby
 require 'rubygems'
