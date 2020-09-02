@@ -1,5 +1,6 @@
 # Comparing Ruby environments on Vercel and Render.com
 
+
 This README is for an example project that compares Ruby environments on [Vercel](https://vercel.com/) and [Render.com](https://render.com/). The goal is to compare the capability to deploy Ruby functions as API endpoints on the Vercel and Render.com platforms.
 
 This project is a work in progress and currently details some unresolved issues with Vercel. The code runs successfully on Render.com so I’m hoping to resolve the issues on Vercel.
