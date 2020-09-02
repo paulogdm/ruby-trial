@@ -385,6 +385,9 @@ Presumably the fauna gem was not loaded from GitHub during the default build pro
 
 The [Vercel Ruby documentation](https://vercel.com/docs/runtimes#official-runtimes/ruby) is limited. All it says about gems is:
 
+```
+This Runtime supports installing dependencies defined in the Gemfile. Alternatively, dependencies can be vendored with the bundler install --deployment command (useful for gems that require native extensions). In this case, dependencies are not built on deployment.
+```
 
 ### Looked at Build Step documentation
 
