@@ -373,7 +373,7 @@ Unknown application error occurred
 Function<LoadError>
 ```
 
-This error originates from the code in *try-vercelrb* at line 3:
+This error originates from the code in `try-vercelrb` at line 3:
 
 ```ruby
 require 'fauna'
