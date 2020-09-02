@@ -1,10 +1,10 @@
 require 'rubygems'
 require 'cowsay'
-# require 'fauna'
+require 'fauna'
 require 'nokogiri'
 
 puts("Cowsay gem version: " + Cowsay::VERSION)
-# puts("Fauna gem version: " + Fauna::VERSION)
+puts("Fauna gem version: " + Fauna::VERSION)
 puts("Nokogiri gem version: " + Nokogiri::VERSION)
 puts("$LOAD_PATH: " + $LOAD_PATH.to_s)
 
