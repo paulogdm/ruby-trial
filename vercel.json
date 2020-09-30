@@ -1,4 +1,4 @@
 {
   "public": true,
-  "rewrites": [{"source": "/(.*)", "dest": "/api/index.rb"}]
+  "rewrites": [{"source": "/(.*)", "destination": "/api/index.rb"}]
 }
