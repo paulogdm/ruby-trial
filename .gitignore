@@ -54,4 +54,4 @@ Temporary Items
 /vendor/bundle
 /lib/bundler/man/
 
-# End of https://www.gitignore.io/api/ruby,macos
+.vercel
