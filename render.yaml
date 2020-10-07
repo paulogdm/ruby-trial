@@ -1,6 +1,0 @@
-services:
-- type: web
-  name: ruby-trial
-  env: ruby
-  buildCommand: bundle install
-  startCommand: bundle exec ruby try-render.rb
